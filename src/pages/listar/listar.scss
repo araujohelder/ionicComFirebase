@@ -1,0 +1,22 @@
+page-listar {
+  .card p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card .empresa {
+    font-size: 70%;
+  }
+
+  .rededor-header  {
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #ffffff;
+  }
+}

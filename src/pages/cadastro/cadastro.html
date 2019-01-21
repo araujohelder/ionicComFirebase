@@ -1,0 +1,51 @@
+
+<ion-header class="rededor-header">
+  <ion-navbar class="rededor-navbar">
+    <ion-title>Novo Paciente</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="pacienteForm" (ngSubmit)="novoPaciente()"novalidate>
+        <ion-list>
+          <ion-item>
+              <ion-label floating>Nome</ion-label>
+              <ion-input type="text" formControlName="nome"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Hospital</ion-label>
+              <ion-input type="Text" formControlName="empresa"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Telefone</ion-label>
+              <ion-input type="tel" formControlName="telefone" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>CEP</ion-label>
+              <ion-input type="number" formControlName="cep" (ionBlur)="buscaCep()"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Rua</ion-label>
+              <ion-input type="text" formControlName="rua" disabled></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Bairro</ion-label>
+              <ion-input type="text" formControlName="bairro" disabled></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Número</ion-label>
+              <ion-input type="number" formControlName="numero" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Cidade</ion-label>
+              <ion-input type="text" formControlName="cidade" disabled></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Estado</ion-label>
+              <ion-input type="text"formControlName="uf" disabled></ion-input>
+          </ion-item>
+        </ion-list>
+        <button type="submit" ion-button block [disabled]="pacienteForm.invalid" class="button-confirm" >Salvar</button>
+      </form>
+
+</ion-content>

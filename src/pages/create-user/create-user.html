@@ -1,0 +1,27 @@
+<ion-header class="rededor-header">
+  <ion-navbar class="rededor-navbar">
+    <ion-title>Novo Usuário</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form novalidate [formGroup]="registerForm" (ngSubmit)="submitForm()">
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="Nome" formControlName="name" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" placeholder="E-mail" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Senha" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Confirmar Senha" formControlName="confirmPassword"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button type="submit" ion-button [disabled]="registerForm.invalid" block>Criar conta</button>
+    </div>
+  </form>
+</ion-content>

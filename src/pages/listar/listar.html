@@ -1,0 +1,28 @@
+
+<ion-header class="rededor-header">
+
+  <ion-navbar class="rededor-navbar">
+    <ion-title>Meus Pacientes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div *ngIf="pacientesDb.length > 0; else estadoVazio">
+        <ion-card *ngFor="let paciente of pacientesDb">
+          <ion-card-content>
+            <ion-card-title>
+              {{ paciente.nome }} - <span class="empresa"> {{ paciente.empresa }} </span>
+            </ion-card-title>
+            <p>
+              {{ paciente.telefone }} | {{ paciente.rua }} | {{ paciente.uf }}
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <ng-template #estadoVazio>
+        <h2>Você ainda não tem pacientes</h2>>
+      </ng-template>
+
+</ion-content>
